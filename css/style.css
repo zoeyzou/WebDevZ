@@ -1,0 +1,28 @@
+
+.page-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background: linear-gradient(white,white), repeating-linear-gradient(45deg, rgb(157,54,58) 7%, rgb(157,54,58) 10.5%, rgb(230,212,146) 10.5%, rgb(230,212,146) 14%);
+  background-attachment: padding-box, border-box;
+  padding: 1% 0.8%;
+  background-origin: content-box, padding-box;
+  background-clip: content-box, padding-box;
+}
+
+.my-navbar {
+  background-color: rgb(244,245,177);
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-text {
+    display: block;
+    text-align: right;
+  }
+}
+
