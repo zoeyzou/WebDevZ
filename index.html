@@ -11,80 +11,76 @@
     <link rel="icon" href="img/ninja.png">
 
     <!--link to bootstrap-->
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
   </head> 
   
   <body>
-    <div class="page-border">
-      
-      <!--navbar-->
-      <nav class="navbar navbar-expand-lg navbar-light my-navbar">  
-        <a class="navbar-brand" href="#">
-          <img src="img/ninja.png" width="30" height="30" class="d-inline-block align-top" alt="Ninja Turtle">
-          WebDev Z</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <span class="navbar-text mr-auto">
-            A self-teach web developer and a fascinating girl.
-          </span>
-          <ul class="navbar-nav float-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Check Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Find Me</a>
-            </li>
-          </ul>
-        </div>
+    
+    <header class="header">
+
+      <div class="child nav-head">
+        <img src="img/ninja.png">
+        <span>WebDevZ</span>
+      </div>
+    
+      <div class="child nav-slogan">
+        <span>Self-teach Web Developer & Fascinating Soul</span>
+      </div>
+    
+      <nav class="child" id="nav-menu">
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-menu-item active"><i class="material-icons">sentiment_very_satisfied</i><span>Z-Space</span></a></li>
+          <li><a href="#" class="nav-menu-item"><i class="material-icons">bubble_chart</i><span>Z-Story</span></a></li>
+          <li><a href="#" class="nav-menu-item"><i class="material-icons">phonelink_ring</i><span>Z-Connect</span></a></li>
+        </ul>
       </nav>
+   
+    </header>
+    
 
-      <div class="container-fluid">
-        <div class="row">
-          <!--fixed side bar-->
-          <!--<div class="col-md-4">
-            <div class="col-xs-12" id="sticky-sidebar">
-                Deleniti placeat ut earum velit qui nisi rerum. Id amet harum. Voluptatem eius nam beatae in veniam accusantium tenetur sint qui. Saepe ut eos consequatur a commodi tempora est enim qui. Tempora fuga est placeat id. Doloremque dignissimos corrupti ratione ex sunt nemo quia impedit.
-            </div> 
-          </div>
-          <!--main content-->
-          <!--<div class="col-md-8" id="main">
-            Assumenda et inventore amet aut et ducimus velit libero distinctio. Officia ut id. Animi quia adipisci est accusantium. Optio aliquam quos ea earum deserunt et et id.
-          </div>-->
-          <div class="col-md-4 px-1" id="sticky-sidebar">
-            <div class="py-2 sticky-top">
-              Harum veritatis id nulla nesciunt quas et. Sit sunt nam aut omnis in soluta non quae vitae. Ex molestias quam et. Voluptatem omnis ipsa ipsa aperiam. Nisi quidem dolorem vitae aut quod ducimus dignissimos.
-            </div>
-          </div>
+    <!-- flex gallery
+    <div id="container">
+      <ul id="flex-container">
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-1.jpg" /></a></li>
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-2.jpg" /></a></li>
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-3.jpg" /></a></li>
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-4.jpg" /></a></li>
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-5.jpg" /></a></li>
+        <li><a href="#"><div class="magnify"></div><span>Cultura</span><img src="img/thumb-6.jpg" /></a></li>
+      </ul>
 
-          <div class="col-md-8" id="main">
-            Dolor quia neque odit et et. Velit et quisquam vero quibusdam dolores fuga veniam. A sapiente molestias. Ut voluptatem voluptatem labore. Explicabo occaecati sed molestiae est omnis laborum. Omnis molestias nulla minus sit fugit quibusdam libero suscipit.
- 
-Eaque aut illo et omnis rem odio ratione et ducimus. Iste quaerat sit perferendis. Totam molestiae rerum in.
- 
-Aut architecto nulla doloribus sequi. Reiciendis quis velit qui delectus architecto amet ea quod. Quia voluptas dolore totam laudantium odit iusto. Sequi eum et. Et praesentium doloremque et aut quas facere. Nisi voluptate accusantium deserunt mollitia dolor quos.
+    </div>
+    -->
 
-          </div>
-        </div>
+    <!-- flex nav
+    <nav>
+      <div class="child">
+        <img src="img/ninja.png" />
       </div>
 
-      
-   </div>
+      <ul class="child">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-   
+      <div class="child">
+        <img src="img/magnify.png" id="magnify" />
+        <input type="text" name="search" id="search">
+      </div>
+    </nav>
 
+    <section class="container">
+      <h1>Flexawesome</h1>
+      <p>Sint et qui. Ipsam corrupti quas. A corporis recusandae facilis sint sit cupiditate fuga ut soluta. Fugiat veniam asperiores quis animi pariatur tenetur veniam unde amet. Eos rerum ipsa fugiat esse. Eum qui sapiente et aut numquam consectetur.</p>
+    </section>
+    -->
 
     <!--link to bootstrap js tools-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
     <script src="js/script.js"></script>
   </body>
 

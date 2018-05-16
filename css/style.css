@@ -1,28 +1,379 @@
+/*
+  theme color:
+  brown #CCB24C; hay #F7D683; skin #FFFDC0; white #FFFFFD; blue #457D97;
+*/
 
-.page-border {
+body {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%), url(../img/dreamcatcher.jpg) no-repeat fixed center 3rem;
+  background-size: 27rem;
+  margin: 0;
+  height: 100%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+/*navigation and its responsive design*/
+.header {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  background: #FFFDC0;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.child {
+  flex-grow: 1;
+}
+
+.nav-menu {
+  list-style-type: none;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
+}
+
+.nav-menu li {
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.nav-menu-item {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #7e7e62;
   height: 100%;
-  width: 100%;
-  z-index: 5;
-  background: linear-gradient(white,white), repeating-linear-gradient(45deg, rgb(157,54,58) 7%, rgb(157,54,58) 10.5%, rgb(230,212,146) 10.5%, rgb(230,212,146) 14%);
-  background-attachment: padding-box, border-box;
-  padding: 1% 0.8%;
-  background-origin: content-box, padding-box;
-  background-clip: content-box, padding-box;
+  padding: 0.9rem 0.2rem;
 }
 
-.my-navbar {
-  background-color: rgb(244,245,177);
+.active, .nav-menu-item:hover {
+  background-color: #F7D683;
+  color: #FFFDC0;
 }
 
-@media only screen and (max-width: 991px) {
-  .navbar-text {
-    display: block;
-    text-align: right;
+.nav-menu a:hover {
+  transition: color 0.4s;
+}
+
+.nav-menu i {
+  vertical-align: middle;
+  padding-right: 0.1rem;
+}
+
+.nav-menu span {
+  vertical-align: middle;
+}
+
+.nav-head {
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.nav-head img {
+  vertical-align: middle;
+}
+
+.nav-head span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #7e7e62;
+}
+
+.nav-slogan {
+  flex-grow: 3;
+  align-self: center;
+  color: #CCB24C;
+
+}
+
+/*responsive design part*/
+
+@media only screen and (min-width: 656px) {
+  .nav-head {
+    margin-left: 1rem;
   }
 }
 
+@media only screen and (max-width: 913px) {
+  body {
+    background-position-y: 6.3rem;
+  }
+
+  .nav-menu {
+    border-top: 0.05em solid rgba(204, 178, 76, 0.5);
+  }
+}
+
+@media only screen and (max-width: 656px) {
+  
+  .header {
+    flex-direction: column;
+  }
+
+  .header div:nth-child(2) {
+    display: none;
+  }
+
+  .nav-head {
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .nav-menu-item {
+    font-size: 0.9rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .nav-menu i {
+      display: none;
+    }
+}
+
+
+
+
+/* flex gallery
+html, body {
+  height: 100%;
+  background: #000;
+  padding-top: 40px;
+  
+}
+
+#container {
+  
+}
+
+ul#flex-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  flex-grow: 1;
+  width: 200px;
+  padding-top: 45px;
+  color: white;
+
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+ul li img {
+  width: 100%;
+}
+
+ul li a span {
+  position: absolute;
+  color: white;
+  bottom: 7px;
+  left: 15px;
+  z-index: 3;
+  font-family: 'Railway';
+}
+
+ul li:after {
+  content: "";
+  position: absolute;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); 
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); 
+}
+
+.magnify {
+  background: url(../img/magnify.png) no-repeat;
+  position: absolute;
+  z-index: 5;
+  width: 54px;
+  height: 55px;
+  opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul li:hover .magnify {
+  opacity: 100 !important;
+}
+
+ul li:hover {
+  opacity: .8;
+}
+
+@media only screen and (max-width: 40.063em) {
+  ul li {
+    width: 150px;
+    font-size: 1.5rem;
+  }
+}
+*/
+/* flex nav
+html, body {
+  height: 100%;
+  background: #1c1c1c;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: gray;
+}
+
+nav {
+  display: flex;
+  background: black;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.child {
+  flex-grow: 1;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+  width: 100px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+nav div:nth-child(1) {
+  flex-grow: 8;
+  width: 125px;
+
+}
+
+nav div:nth-child(1) img {
+  margin-left: 20px;
+}
+
+nav div:nth-child(3) {
+  align-self: center;
+}
+
+#search {
+  background: white url(../img/magnify2.png) no-repeat 5px 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 4px 4px 4px 25px;
+  display: none;
+}
+
+#magnify {
+  cursor: pointer;
+}
+
+h1, p {
+  color: #b2b2b2;
+}
+
+.container {
+  padding: 80px;
+}
+
+@media all and (max-width: 800px) {
+  nav {
+    justify-content: space-around;
+  }
+
+  .container {
+    padding: 50px;
+  }
+
+  #search {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 542px) {
+  nav div:nth-child(1) {
+    margin: 5px auto;
+    display: block;
+
+  }
+
+  nav {
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+
+  .child {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  ul {
+    background: #232323;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  ul li {
+    width: 50%;
+    padding: 5px 0;
+  }
+  
+  #search {
+    display: block;
+    width: 90%;
+    margin: 16px auto 0 auto;
+  }
+
+  #magnify {
+    display: none;
+  }
+
+  .container {
+    padding: 30px;
+  }
+}
+
+*/
