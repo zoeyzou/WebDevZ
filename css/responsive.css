@@ -6,14 +6,32 @@
   }
 }
 
-@media only screen and (max-width: 944px) {
+@media only screen and (max-width: 943px) {
   body {
-    background-position-y: 6.3rem;
+    background-position-y: 7rem !important;
   }
 
   .nav-menu {
     border-top: 0.05em solid rgba(204, 178, 76, 0.5);
   }
+
+  main .intro {
+    margin-top: 8rem !important;
+    flex-direction: column !important;
+  }
+
+  .intro h1, .intro h1+p {
+    text-align: center;
+  }
+
+  .intro div:nth-child(1) {
+    order: 1 !important;
+  }
+
+  .intro-text {
+    padding: 0.5rem !important;
+  }
+  
 }
 
 @media only screen and (max-width: 656px) {
@@ -37,6 +55,8 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+
 
 }
 
