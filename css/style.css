@@ -2,11 +2,17 @@
   theme color:
   brown #CCB24C; hay #F7D683; skin #FFFDC0; white #FFFFFD; blue #457D97;
 */
+@import url(responsive.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%), url(../img/dreamcatcher.jpg) no-repeat fixed center 3rem;
   background-size: 27rem;
-  margin: 0;
   height: 100%;
   font-family: 'Raleway', "Trebuchet MS", Helvetica, sans-serif;
   letter-spacing: 0.1rem;
@@ -14,8 +20,6 @@ body {
 
 .container {
   display: flex;
-  margin: 0;
-  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -107,53 +111,5 @@ body {
   color: #CCB24C;
 }
 
-/*responsive design part*/
-
-@media only screen and (min-width: 656px) {
-  .nav-head {
-    margin-left: 1rem;
-  }
-}
-
-@media only screen and (max-width: 936px) {
-  body {
-    background-position-y: 6.3rem;
-  }
-
-  .nav-menu {
-    border-top: 0.05em solid rgba(204, 178, 76, 0.5);
-  }
-}
-
-@media only screen and (max-width: 656px) {
-  
-  .header {
-    flex-direction: column;
-  }
-
-  .header div:nth-child(2) {
-    display: none;
-  }
-
-  .nav-head {
-    text-align: center;
-    width: 100%;
-  }
-
-
-  .nav-menu-item {
-    font-size: 0.9rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-  }
-
-}
-
-@media only screen and (max-width: 320px) {
-
-  .nav-menu i {
-      display: none;
-    }
-}
 
 

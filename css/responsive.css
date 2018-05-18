@@ -6,7 +6,7 @@
   }
 }
 
-@media only screen and (max-width: 936px) {
+@media only screen and (max-width: 944px) {
   body {
     background-position-y: 6.3rem;
   }
@@ -19,23 +19,23 @@
 @media only screen and (max-width: 656px) {
   
   .header {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
-  .header div:nth-child(2) {
+  .nav-slogan {
     display: none;
   }
 
   .nav-head {
     text-align: center;
-    width: 100%;
+    align-self: center;
   }
 
 
   .nav-menu-item {
     font-size: 0.9rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
 }
