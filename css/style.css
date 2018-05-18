@@ -12,6 +12,13 @@ body {
   letter-spacing: 0.1rem;
 }
 
+.container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
 /*navigation and its responsive design*/
 .header {
   position: fixed;

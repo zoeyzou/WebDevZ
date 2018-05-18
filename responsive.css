@@ -1,0 +1,48 @@
+/*responsive design part*/
+
+@media only screen and (min-width: 656px) {
+  .nav-head {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 936px) {
+  body {
+    background-position-y: 6.3rem;
+  }
+
+  .nav-menu {
+    border-top: 0.05em solid rgba(204, 178, 76, 0.5);
+  }
+}
+
+@media only screen and (max-width: 656px) {
+  
+  .header {
+    flex-direction: column;
+  }
+
+  .header div:nth-child(2) {
+    display: none;
+  }
+
+  .nav-head {
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .nav-menu-item {
+    font-size: 0.9rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .nav-menu i {
+      display: none;
+    }
+}

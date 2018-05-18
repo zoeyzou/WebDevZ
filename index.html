@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
 
-    <title>ZoeyZ's Personal Website</title>
+    <title>WebDevZ</title>
     <meta name="description" content="Built this website with love">
     <meta name="author" content="ZoeyZ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
     <link rel="icon" href="img/ninja.png">
 
-    <!--link to bootstrap-->
     <link href="https://fonts.googleapis.com/css?family=Dosis|Lobster|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
   </head> 
   
@@ -32,22 +32,103 @@
     
       <nav class="child" id="nav-menu">
         <ul class="nav-menu">
-          <li><a href="#" class="nav-menu-item active"><i class="material-icons">sentiment_very_satisfied</i><span>Z-Space</span></a></li>
-          <li><a href="#" class="nav-menu-item"><i class="material-icons">bubble_chart</i><span>Z-Story</span></a></li>
-          <li><a href="#" class="nav-menu-item"><i class="material-icons">phonelink_ring</i><span>Z-Connect</span></a></li>
+          <li><a href="#intro" class="nav-menu-item active"><i class="material-icons">sentiment_very_satisfied</i><span>Z-Space</span></a></li>
+          <li><a href="#life" class="nav-menu-item"><i class="material-icons">bubble_chart</i><span>Z-Story</span></a></li>
+          <li><a href="#footer" class="nav-menu-item"><i class="material-icons">phonelink_ring</i><span>Z-Connect</span></a></li>
         </ul>
       </nav>
    
     </header>
     
-    <main>
+    <main class="container">
+
+      <section class="flex intro" id="intro">
+        <div>
+          <img src="img/avatar.jpg" class="profile-img"> 
+        </div>
+        <div>
+          <h1 >Zoey Zou</h1>    
+          <p>Front-End Web Developer</p>      
+          <p>A SELF-TEACH web developer who learned  HTML/CSS/JavaScript and some frameworks and libraries such as Bootstrap,LESS, ProcessingJS from scratch. A self-motivator seeking a chance to learn more from real-world people/project.</p>
+        </div>
+      </section>
+
+      <section class="flex profile">
+        <h2>skills</h2>
+        <section class="profile-skill">
+          <div class="profile-skill-category">
+            <h3>WEB</h3>
+            <ul>
+              <li>html5</li>
+              <li>css3</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+              <li>Bootstrap</li>
+              <li>Visual Studio Code</li>
+            </ul>
+          </div>
+          <div class="profile-skill-category">
+            <h3>Design and Others</h3>
+            <ul>
+              <li>Photoshop</li>
+              <li>SketchUp</li>
+              <li>Confluence</li>
+              <li>Event Organizing</li>
+              <li>Copyright Application</li>
+            </ul>
+          </div>
+        </section>
+
+        <h2>Interest</h2>
+        <section class="interest">
+          <ul>
+            <li>Read</li>
+            <li>Jog</li>
+            <li>Boardgame</li>
+            <li>Handicraft</li>
+            <li>Riddles</li>
+            <li>Meditate</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="flex life" id="life">
+        <h2>Life Story</h2>
+        <section>
+          <h3>Work</h3>
+          <ul>
+            <li>
+              <h4><time>2017.12till now</time> Self-Learning Programming</h4>
+              <p>Fulltime learning web development, including HTML / CSS / JavaScript / Git from Scratch from online coding tutorials such as Codecademy, Khanacademy etc. Currently working on project such as personal website and card-game Blackjack.</p>
+            </li>
+            <li>
+              <h4><time>2015.5 – 2017.12</time>Vspace Tech Dev Co.,Ltd. (China)</h4>
+              <p>Administrative Officer in this VR startup. Managed to learn various tools such as Photoshop, Confluence, Sony Vegas etc; also independently gained multiple IP assets, e.g. patent, software copyright; organized mul-tiple public events and was constantly multi-tasking in different operational roles.</p>
+            </li>
+            <li>
+              <h4><time>2012.2 – 2015.4</time>Importaciones Fermass C.A.(China)</h4>
+              <p>Sourcing Specialist in this Venezuelan trade company. Learned international trade-related process, including sourcing, logistics, negotiation, customs clearance etc.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Outside Work</h3>
+          <ul>
+            <li><time>2011-2016</time>Part-time study at Jiangxi Normal University, earned Assciate and Bachelor degree in English Major</li>
+            <li><time>2013-2014</time>Earned 3 Marathon medals for half marathon/mountain Marathon/full Marathon</li>
+            <li><time>In 2012</time>, Organized 10 sessions of Speed Dating events</li>
+            <li>Made multiple dreamcatchers and wristbracelets</li>
+          </ul>
+        </section>
+      </section>
 
     </main>
 
-    <footer>
+    <footer class="flex footer" id="footer">
 
     </footer>
-    <!--link to bootstrap js tools-->
+
     
     <script src="js/script.js"></script>
   </body>
