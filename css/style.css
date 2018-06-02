@@ -2,7 +2,6 @@
   theme color:
   brown #CCB24C; hay #F7D683; skin #FFFDC0; white #FFFFFD; blue #457D97;
 */
-@import url(responsive.css);
 
 * {
   margin: 0;
@@ -23,6 +22,7 @@ h2, h3, h4, h5 {
   padding: 0.5rem;
   text-align: center;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -32,15 +32,31 @@ h1 {
   text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.5), -0.5px -0.5px 1px rgba(255, 255, 255, 0.5);
 }
 
+h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
 h2:before,
 h2:after {
- background-color: #333;
+ background-color: rgba(255,255,255,0.7);
  content: "";
  display: inline-block;
  height: 3px;
  position: relative;
  vertical-align: middle;
- width: 30%;
+ width: 40%;
 }
 h2:before {
  right: 1em;
@@ -61,13 +77,20 @@ p {
   align-items: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
 /*navigation*/
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
   background: #FFFDC0;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -84,10 +107,10 @@ p {
 .nav-menu {
   list-style-type: none;
   flex-grow: 1;
-  display: flex;
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .nav-menu li {
@@ -150,20 +173,19 @@ p {
   color: #CCB24C;
 }
 
-/*main-profile*/
-main .intro {
-  margin-top: 6rem;
-}
+/*main-intro*/
 
 .intro {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  width: 80%;
   background-color: rgba(255, 199, 57, 0.80);
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   padding: 1rem;
+  margin-top: 6rem;
+  width: 80%;
+  z-index: 89;
+  box-shadow: 0px 2px 2px 1px rgba(255, 255, 255, 0.5);
 }
 
 .intro div:nth-child(1) {
@@ -184,6 +206,9 @@ main .intro {
 .intro-text {
   order: 2;
   flex: 9;
+}
+
+.intro-text div {
   margin: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -199,5 +224,256 @@ main .intro {
   text-transform: capitalize;
   font-style: italic;
   font-weight: 600;
+}
+
+/*profiles*/
+.profile {
+  width: 80%;
+  flex-flow: column wrap;
+  background: rgba(69, 125, 151,0.8);
+  margin-top: -1rem;
+  padding-bottom: 3rem;
+  z-index: 70;
+}
+
+.profile h2 {
+  color: rgba(255,255,255,0.9);
+  text-transform: uppercase;
+}
+
+.profile-title span {
+  font-size: 1.5rem;
+  color: rgba(69, 125, 151,0.8);
+  display: inline-block;
+  background: rgba(255,255,255,0.9);
+  padding: 2px 20px;
+  border: 2px solid rgba(255,255,255,0.9);
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px 1px rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+}
+
+.profile-skill {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.skill-list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skill-list-item {
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item_name {
+  flex-grow: 1;
+  padding-left: 1rem;
+  flex-basis: 200px;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.skill-item_name i {
+  font-size: 2rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.smaller-icon i {
+  font-size: 1.5rem;
+} 
+
+.skill-item_name span {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.skill-item_progress, .skill-item_progress-percent {
+  height: 1.5rem;
+  border-radius: 10px;
+}
+
+.skill-item_progress {
+  flex-grow: 2;
+  flex-basis: 350px;
+  border: 1px solid white;
+  background: white;
+  z-index: 10;
+  height: 10%;
+}
+
+.skill-item_progress-percent {
+  background: rgba(255, 199, 57, 0.80);
+  z-index: 1;
+  position: relative;
+}
+
+.p90 {
+  width: 90%;
+}
+
+.p80 {
+  width: 80%;
+}
+
+.p70 {
+  width: 70%;
+}
+
+.p60 {
+  width: 60%;
+}
+
+.p50 {
+  width: 50%;
+}
+
+.skill-item_progress-percent p {
+  text-align: right;
+  position: absolute;
+  transform: translateY(-50%); 
+  top: 50%;
+  right: 2%;
+  color: white;
+  font-weight: bold;
+}
+
+.icon-list {
+  width: 85%;
+  margin: 10px auto;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tool-item {
+  padding: 5px;
+}
+
+
+.tool-img {
+  height: 3rem;
+  margin: 5px;
+}
+
+
+.interest-items {
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.interest-items figcaption {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.svg-file {
+  height: 50px;
+  margin: 10px 10px;
+}
+
+
+/*responsive design part*/
+
+@media only screen and (min-width: 656px) {
+  .nav-head {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 917px) {
+  body {
+    background-position-y: 7rem;
+  }
+
+  .nav-menu {
+    border-top: 0.05em solid rgba(204, 178, 76, 0.5);
+  }
+
+  .intro {
+    margin-top: 8rem;
+    flex-direction: column;
+  }
+
+  .intro h1, .intro h1+p {
+    text-align: center;
+  }
+
+  .intro div:nth-child(1) {
+    order: 1;
+  }
+
+  
+}
+
+@media only screen and (max-width: 656px) {
+  
+  .header {
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 0px rgba(224,223,204,0.8);
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .intro-img {
+    width: 13rem;
+  }
+
+  .nav-slogan {
+    display: none;
+  }
+
+  .nav-head {
+    text-align: center;
+    align-self: center;
+  }
+
+  .nav-menu-item {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .intro {
+    width: 100%;
+    margin-top: 6rem;
+    border-radius: 0;
+    padding: 10px;
+    background-color: rgba(255, 199, 57, 0.80);
+    box-shadow: 0px 0px 3px 3px rgba(224,223,204,0.8);
+  }
+
+  .intro-content {
+    font-size: 1rem;
+  }
+
+  .profile {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .nav-menu i {
+      display: none;
+    }
 }
 

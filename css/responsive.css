@@ -6,7 +6,7 @@
   }
 }
 
-@media only screen and (max-width: 943px) {
+@media only screen and (max-width: 917px) {
   body {
     background-position-y: 7rem !important;
   }
@@ -28,9 +28,6 @@
     order: 1 !important;
   }
 
-  .intro-text {
-    padding: 0.5rem !important;
-  }
   
 }
 
@@ -38,6 +35,20 @@
   
   .header {
     flex-direction: column !important;
+    box-shadow: 0 0 0;
+  }
+
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+
+  main .intro {
+    margin-top: 7rem !important;
+  }
+
+  .intro-img {
+    width: 13rem !important;
   }
 
   .nav-slogan {
@@ -49,13 +60,23 @@
     align-self: center;
   }
 
-
   .nav-menu-item {
     font-size: 0.9rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
 
+  .intro {
+    border-radius: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    background-color: rgba(255, 199, 57, 0.80);
+  }
+
+
+  .intro-text p:nth-child(2) {
+    font-size: 1rem !important;
+  }
 
 
 }

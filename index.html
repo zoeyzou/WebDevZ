@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Dosis|Lobster|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -19,10 +20,10 @@
   
   <body>
     
-    <header class="header">
+    <header class="flex header">
 
       <div class="child nav-head">
-        <img src="img/ninja.png">
+        <img src="img/ninja.png" alt="turtle ninja">
         <span>WebDevZ</span>
       </div>
     
@@ -31,10 +32,10 @@
       </div>
     
       <nav class="child" id="nav-menu">
-        <ul class="nav-menu">
+        <ul class="flex nav-menu">
           <li><a href="#intro" class="nav-menu-item active"><i class="material-icons">sentiment_very_satisfied</i><span>Z-Space</span></a></li>
           <li><a href="#life" class="nav-menu-item"><i class="material-icons">bubble_chart</i><span>Z-Story</span></a></li>
-          <li><a href="#footer" class="nav-menu-item"><i class="material-icons">phonelink_ring</i><span>Z-Connect</span></a></li>
+          <li><a href="#footer" class="nav-menu-item"><i class="material-icons">phonelink_ring</i><span>Z-Work</span></a></li>
         </ul>
       </nav>
    
@@ -42,62 +43,121 @@
     
     <main class="container" id="intro">
 
-      <section class="intro">
-        
+      <section class="flex intro"> 
         <div>
-          <img src="img/avatar.jpg" class="intro-img"> 
+          <img src="img/avatar.jpg" class="intro-img" alt="turtle ninja logo"> 
         </div>
-        
         <div class="intro-text">
-          <h1 >Zoey Zou</h1>    
-          <p>Front-End Web Developer</p>      
-          <p>A SELF-TEACH web developer who learned  HTML / CSS / JavaScript and some frameworks and libraries such as Bootstrap,LESS, ProcessingJS from scratch. A self-motivator seeking a chance to learn more from real-world people/project.</p>
+          <div class="intro-wrapper">
+            <h1 >Zoey Zou</h1>    
+            <p>Front-End Web Developer</p>      
+            <p class="intro-content">I am a self-teach enthusiast in various aspects of life. Passionate about learning new things and exploring new possibilities; persistant and fearless on my own goal. Currently devote to becoming a web developer. <em>From scratch</em>, I have learned what needs to be learned to be a web developer, such as HTML/CSS/JS/GIT. </p>
+          </div>
         </div>
-      
       </section>
 
       <section class="flex profile">
-        <h2>skills</h2>
-        <section class="profile-skill">
-          <div class="profile-skill-category">
-            <h3>WEB</h3>
-            <ul>
-              <li>html5</li>
-              <li>css3</li>
-              <li>JavaScript</li>
-              <li>Git</li>
-              <li>Bootstrap</li>
-              <li>Visual Studio Code</li>
-            </ul>
-          </div>
-          <div class="profile-skill-category">
-            <h3>Design and Others</h3>
-            <ul>
-              <li>Photoshop</li>
-              <li>SketchUp</li>
-              <li>Confluence</li>
-              <li>Event Organizing</li>
-              <li>Copyright Application</li>
-            </ul>
-          </div>
-        </section>
-
-        <h2>Interest</h2>
-        <section class="interest">
-          <ul>
-            <li>Read</li>
-            <li>Jog</li>
-            <li>Boardgame</li>
-            <li>Handicraft</li>
-            <li>Riddles</li>
-            <li>Meditate</li>
+        <h2>Profile</h2>
+        <div class="profile-skill">
+          <h3 class="profile-title"><span>Web Skills</span></h3>
+          <ul class="skill-list">
+            <li class="flex skill-list-item">
+              <div class="skill-item_name"><i class="fab fa-html5"></i><span>HTML5</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p90"><p>90%</p></div></div>
+            </li>
+            <li class="flex skill-list-item">
+              <div class="skill-item_name"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p90"><p>90%</p></div></div>
+            </li>
+            <li class="flex skill-list-item">
+              <div class="skill-item_name"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p50"><p>50%</p></div></div>
+            </li>
+            <li class="flex skill-list-item">
+              <div class="skill-item_name"><i class="fab fa-git-square"></i><span>GIT</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p70"><p>70%</p></div></div>
+            </li>
+            <li class="flex skill-list-item">
+              <div class="skill-item_name"><i class="material-icons">web</i><span>ResponsiveWeb</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p80"><p>80%</p></div></div>
+            </li>
+            <li class="flex skill-list-item">
+              <div class="skill-item_name smaller-icon"><i class="fas fa-terminal"></i><span>CLI</span></div>
+              <div class="skill-item_progress"><div class="skill-item_progress-percent p60"><p>60%</p></div></div>
+            </li>
           </ul>
-        </section>
+        </div>
+
+        <div class="profile-tools">
+          <h3 class="profile-title"><span>Other Tools</span></h3>
+          <ul class="flex icon-list">
+            <li class="tool-item"><img src="img/photoshop-cc.svg" class="tool-img" title="Photoshop" alt="photoshop" /></li>
+            <li class="tool-item"><img src="img/visual-studio-code.svg" class="tool-img" title="Visual Studio Code" alt="visual-studio-code" /></li>
+            <li class="tool-item"><img src="img/microsoft-office-2013.svg" class="tool-img" title="Microsoft Office" alt="visual studio code" /></li>
+            <li class="tool-item"><img src="img/odoo.svg" class="tool-img" title="Odoo Open ERP" alt="Odoo Open ERP" /></li>
+            <li class="tool-item"><img src="img/confluence.svg" class="tool-img" title="Confluence" alt="Confluence" /></li>
+            <li class="tool-item"><img src="img/jira.svg" class="tool-img" title="Jira" alt="Jira" /></li>
+          </ul>
+        </div>
+        
+        <div class="profile-interest">
+            <h3 class="profile-title"><span>Interest</span></h3>
+              <ul class="flex icon-list">
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/reading.svg" class="svg-file" alt="reading" />
+                    <figcaption>Reading</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/jogging.svg" class="svg-file" alt="jogging" />
+                    <figcaption>Jogging</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/boardgame.svg" class="svg-file" alt="boardgame" />
+                    <figcaption>Boardgame</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/dreamcatcher.svg" class="svg-file" alt="Handicraft" />
+                    <figcaption>Handicraft</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/riddle.svg" class="svg-file" alt="riddle" />
+                    <figcaption>Riddles</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/meditate.svg" class="svg-file" alt="Meditation" />
+                    <figcaption>Meditation</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/socialize.svg" class="svg-file" alt="Socializing" />
+                    <figcaption>Socializing</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure class="flex interest-items">
+                    <img src="img/event.svg" class="svg-file" alt="Event-organizing" />
+                    <figcaption>Event-organizing</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        </div>
       </section>
 
       <section class="flex life" id="life">
         <h2>Life Story</h2>
-        <section>
+        <div>
           <h3>Work</h3>
           <ul>
             <li>
@@ -113,9 +173,9 @@
               <p>Sourcing Specialist in this Venezuelan trade company. Learned international trade-related process, including sourcing, logistics, negotiation, customs clearance etc.</p>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section>
+        <div>
           <h3>Outside Work</h3>
           <ul>
             <li><time>2011-2016</time>Part-time study at Jiangxi Normal University, earned Assciate and Bachelor degree in English Major</li>
@@ -123,12 +183,12 @@
             <li><time>In 2012</time>, Organized 10 sessions of Speed Dating events</li>
             <li>Made multiple dreamcatchers and wristbracelets</li>
           </ul>
-        </section>
+        </div>
       </section>
 
     </main>
 
-    <footer class="flex footer" id="footer">
+    <footer class="flex footer">
 
     </footer>
 
