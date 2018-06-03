@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 body {
@@ -22,7 +23,7 @@ h2, h3, h4, h5 {
   padding: 0.5rem;
   text-align: center;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -46,6 +47,8 @@ h2 {
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
+  color: rgba(255,255,255,0.9);
+  text-transform: uppercase;
 }
 
 h2:before,
@@ -58,6 +61,7 @@ h2:after {
  vertical-align: middle;
  width: 40%;
 }
+
 h2:before {
  right: 1em;
  margin-left: -50%;
@@ -65,6 +69,11 @@ h2:before {
 h2:after {
  left: 1em;
  margin-right: -50%;
+}
+
+h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.15rem;
 }
 
 p {
@@ -174,12 +183,15 @@ ul {
 }
 
 /*main-intro*/
+main {
+  margin-bottom: 2rem;
+}
 
 .intro {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: rgba(255, 199, 57, 0.80);
+  background-color: rgba(119,115,138, 0.80);
   border-radius: 1rem 1rem 0 0;
   padding: 1rem;
   margin-top: 6rem;
@@ -227,23 +239,23 @@ ul {
 }
 
 /*profiles*/
-.profile {
+.column-layout {
   width: 80%;
   flex-flow: column wrap;
-  background: rgba(69, 125, 151,0.8);
   margin-top: -1rem;
-  padding-bottom: 3rem;
-  z-index: 70;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-.profile h2 {
-  color: rgba(255,255,255,0.9);
-  text-transform: uppercase;
+.profile {
+  background: rgba(208,146,133,0.8);
+  z-index: 70;
 }
 
 .profile-title span {
   font-size: 1.5rem;
-  color: rgba(69, 125, 151,0.8);
+  color: rgba(164,152,80,1);
   display: inline-block;
   background: rgba(255,255,255,0.9);
   padding: 2px 20px;
@@ -313,9 +325,27 @@ ul {
 }
 
 .skill-item_progress-percent {
-  background: rgba(255, 199, 57, 0.80);
+  background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 0px, rgb(146, 159, 175) 15px, rgb(144, 102, 114) 15px, rgb(144, 102, 114) 30px);
   z-index: 1;
   position: relative;
+  animation: Gradient 2s ease-in-out infinite;
+  transition: all 2s linear;
+}
+
+@keyframes Gradient { 
+  0%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 0px, rgb(146, 159, 175) 15px, rgb(144, 102, 114) 15px, rgb(144, 102, 114) 30px)}
+  50%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 15px, rgb(146, 159, 175) 30px, rgb(144, 102, 114) 30px, rgb(144, 102, 114) 45px)}
+  100%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 30px, rgb(146, 159, 175) 45px, rgb(144, 102, 114) 45px, rgb(144, 102, 114) 60px)}
+}
+
+.skill-item_progress-percent p {
+  text-align: right;
+  position: absolute;
+  transform: translateY(-50%); 
+  top: 50%;
+  right: 2%;
+  color: white;
+  font-weight: bold;
 }
 
 .p90 {
@@ -338,15 +368,6 @@ ul {
   width: 50%;
 }
 
-.skill-item_progress-percent p {
-  text-align: right;
-  position: absolute;
-  transform: translateY(-50%); 
-  top: 50%;
-  right: 2%;
-  color: white;
-  font-weight: bold;
-}
 
 .icon-list {
   width: 85%;
@@ -360,17 +381,18 @@ ul {
   padding: 5px;
 }
 
-
 .tool-img {
   height: 3rem;
   margin: 5px;
+  opacity: 0.7;
 }
-
 
 .interest-items {
   flex-flow: column wrap;
   align-items: center;
+  justify-content: flex-start;
   margin: 5px 10px;
+  min-width: 130px;
 }
 
 .interest-items figcaption {
@@ -383,6 +405,135 @@ ul {
   margin: 10px 10px;
 }
 
+.life {
+  background: rgba(144,102,114, 0.8);
+  z-index: 60;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.life-title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.life-title h3 {
+  display: inline-block;
+  width: 41%;
+  background: white;
+  margin: 3%;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 2s ease;
+  color: rgba(132,187,190,0.9);
+}
+
+.life-title h3:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.experience {
+  width: 90%;
+  background: rgba(132,187,190,0.5);
+  margin: 0 auto;
+  color: rgba(255,255,255,0.9);
+  border-radius: 1rem;
+  border: 0.3rem double rgba(255, 255, 255, 0.5);
+  text-align: justify;
+  padding: 0.3rem 0.1rem;
+}
+
+.experience-title {
+  margin: 0 auto;
+  padding: 1rem;
+  border-bottom: 0.1rem solid rgba(255,255,255,0.9);
+  transition: background-color 1s ease;
+}
+
+.experience-title:hover {
+  background-color: rgba(132,187,190,0.8);
+  cursor: pointer;
+}
+
+.experience-content {
+  display: none;
+  transition: display 2s;
+  border-bottom: 0.1rem solid rgba(255,255,255,0.9);
+  background-color: rgba(132,187,190,0.7);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+#outside-work {
+  display: none;
+  padding: 1rem;
+  letter-spacing: 2px;
+}
+
+#outside-work time {
+  display: inline-block;
+  font-weight: bold;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.05rem;
+  font-family: 'dosis', sans-serif;
+  text-align: right;
+  width: 95px;
+  margin-right: 1rem;
+}
+
+#outside-work li {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.footer {
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: #FFFDC0;
+  color: #CCB24C;
+  font-family: 'dosis', sans-serif;
+  box-shadow: 0px -4px 10px 0px rgba(224,223,204,1)
+}
+
+.footer > div {
+  margin: 0.5rem 1rem;
+}
+
+.footer > div > div {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0.5rem 1rem;
+  flex-grow: 1;
+}
+
+.footer > div > div:first-child a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #CCB24C;
+}
+
+.contact-container {
+  flex-flow: row;
+}
+
+.contact-container li {
+  flex-basis: 4rem;
+  display: inline-block;
+  margin: 1rem;
+
+}
+
+.contact-container li i {
+  font-size: 2.5rem;
+  color: rgb(192, 173, 99);
+}
+
+.footer > div > div:first-child a:hover, .contact-container li i:hover {
+  color: #7e7e62;
+  transition: color 1s;
+}
 
 /*responsive design part*/
 
@@ -464,10 +615,80 @@ ul {
     font-size: 1rem;
   }
 
-  .profile {
+  .column-layout {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .profile-skill {
     width: 100%;
   }
 
+  .skill-list {
+    width: 85%;
+  }
+
+  .footer > div {
+    margin: 0.3rem;
+  }
+
+  .footer > div > div {
+    font-size: 1rem;
+  }
+
+  .footer > div > div:first-child a {
+    font-size: 1rem;
+  }
+
+  .contact-container li {
+    margin: 0.8rem;
+  }
+
+  .contact-container li i {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 1rem;
+  }
+
+  .intro-content {
+    font-size: 0.8rem;
+  }
+
+  .intro-text h1+p {
+    font-size: 0.9rem;
+  }
+
+  .icon-list {
+    width: 95%;
+  }
+
+  .tool-img {
+    height: 2rem;
+  }
+
+  .profile-title span {
+    font-size: 1.2rem;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .skill-item_name {
+    font-size: 0.8rem;
+    flex-basis: 160px;
+    padding-left: 0;
+  }
+
+  .skill-item_progress {
+    flex-basis: 150px;
+  }
+
+  .interest-items {
+    margin: 5px 5px;
+  }
 }
 
 @media only screen and (max-width: 320px) {

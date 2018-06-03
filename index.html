@@ -56,7 +56,7 @@
         </div>
       </section>
 
-      <section class="flex profile">
+      <section class="flex column-layout profile">
         <h2>Profile</h2>
         <div class="profile-skill">
           <h3 class="profile-title"><span>Web Skills</span></h3>
@@ -93,10 +93,10 @@
           <ul class="flex icon-list">
             <li class="tool-item"><img src="img/photoshop-cc.svg" class="tool-img" title="Photoshop" alt="photoshop" /></li>
             <li class="tool-item"><img src="img/visual-studio-code.svg" class="tool-img" title="Visual Studio Code" alt="visual-studio-code" /></li>
-            <li class="tool-item"><img src="img/microsoft-office-2013.svg" class="tool-img" title="Microsoft Office" alt="visual studio code" /></li>
             <li class="tool-item"><img src="img/odoo.svg" class="tool-img" title="Odoo Open ERP" alt="Odoo Open ERP" /></li>
-            <li class="tool-item"><img src="img/confluence.svg" class="tool-img" title="Confluence" alt="Confluence" /></li>
+            <li class="tool-item"><img src="img/microsoft-office-2013.svg" class="tool-img" title="Microsoft Office" alt="microsoft office" /></li>
             <li class="tool-item"><img src="img/jira.svg" class="tool-img" title="Jira" alt="Jira" /></li>
+            <li class="tool-item"><img src="img/confluence.svg" class="tool-img" title="Confluence" alt="Confluence" /></li>
           </ul>
         </div>
         
@@ -118,7 +118,7 @@
                 <li>
                   <figure class="flex interest-items">
                     <img src="img/boardgame.svg" class="svg-file" alt="boardgame" />
-                    <figcaption>Boardgame</figcaption>
+                    <figcaption>Boardgames</figcaption>
                   </figure>
                 </li>
                 <li>
@@ -155,41 +155,58 @@
         </div>
       </section>
 
-      <section class="flex life" id="life">
+      <section class="flex column-layout life" id="life">
         <h2>Life Story</h2>
         <div>
-          <h3>Work</h3>
-          <ul>
+          <div class="life-title" id="life-buttons">
+            <h3>Work</h3>
+            <h3>Outside Work</h3>
+          </div>
+          
+          <ul class="experience" id="work">
             <li>
-              <h4><time>2017.12till now</time> Self-Learning Programming</h4>
-              <p>Fulltime learning web development, including HTML / CSS / JavaScript / Git from Scratch from online coding tutorials such as Codecademy, Khanacademy etc. Currently working on project such as personal website and card-game Blackjack.</p>
+              <h4 class="experience-title"><time>2017.12 till now</time> Front-end Web Developer </h4>
+              <p class="experience-content">Fulltime learning web development, including HTML / CSS / JavaScript / Git from Scratch from online coding tutorials such as Codecademy, FreeCodeCamp etc. Created some small project on Github.</p>
             </li>
             <li>
-              <h4><time>2015.5 – 2017.12</time>Vspace Tech Dev Co.,Ltd. (China)</h4>
-              <p>Administrative Officer in this VR startup. Managed to learn various tools such as Photoshop, Confluence, Sony Vegas etc; also independently gained multiple IP assets, e.g. patent, software copyright; organized mul-tiple public events and was constantly multi-tasking in different operational roles.</p>
+              <h4 class="experience-title"><time>2015.5 – 2017.12 </time>Vspace Tech Dev Co.,Ltd. (China)</h4>
+              <p class="experience-content">Administrative Officer in this VR startup. Managed to learn various tools such as Photoshop, Confluence, Sony Vegas etc; also independently gained multiple IP assets, e.g. patent, software copyright; organized mul-tiple public events and was constantly multi-tasking in different operational roles.</p>
             </li>
             <li>
-              <h4><time>2012.2 – 2015.4</time>Importaciones Fermass C.A.(China)</h4>
-              <p>Sourcing Specialist in this Venezuelan trade company. Learned international trade-related process, including sourcing, logistics, negotiation, customs clearance etc.</p>
+              <h4 class="experience-title"><time>2012.2 – 2015.4 </time>Importaciones Fermass C.A.(China)</h4>
+              <p class="experience-content">Sourcing Specialist in this Venezuelan trade company. Learned international trade-related process, including sourcing, logistics, negotiation, customs clearance etc.</p>
             </li>
+          </ul>
+
+          <ul class="experience" id="outside-work">
+            <li><time>2011 - 2016 </time>Part-time study at Jiangxi Normal University
+            Earned Assciate and Bachelor degree in English Major. IELTS scored 7.5; TOEFL scored 103;
+            </li>
+            <li><time>In 2012     </time> Organized 10 sessions of Speed Dating events;</li>
+            <li><time>2013 - 2014 </time>Earned 3 Marathon medals for half marathon / mountain Marathon / full Marathon;</li>
+            <li><time>In 2015.12 </time>Attended Rails Girls workshop, initiated interest in coding;</li>
+            <li><time>Since 2016</time>Passionate about handicraft, made multiple dreamcatchers and wristbracelets;</li>
+            <li><time>Since 2016</time>Passionate about Boardgames, especially learning -- record is learning at least 1 new game every week for 4 months.</li>
           </ul>
         </div>
 
-        <div>
-          <h3>Outside Work</h3>
-          <ul>
-            <li><time>2011-2016</time>Part-time study at Jiangxi Normal University, earned Assciate and Bachelor degree in English Major</li>
-            <li><time>2013-2014</time>Earned 3 Marathon medals for half marathon/mountain Marathon/full Marathon</li>
-            <li><time>In 2012</time>, Organized 10 sessions of Speed Dating events</li>
-            <li>Made multiple dreamcatchers and wristbracelets</li>
-          </ul>
-        </div>
       </section>
 
     </main>
 
     <footer class="flex footer">
-
+      <div>
+        <div><a href="mailto:zoeyzou2018@gmail.com"><i class="fas fa-at"></i> zoeyzou2018@gmail.com</a></div>
+        <div><i class="fas fa-map-marker-alt"></i><span> Copenhagen, Denmark</span></div>
+      </div>
+      <div>
+        <ul  class="flex contact-container">
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a><i class="fab fa-github-square"></i></a></li>
+          <li><a><i class="fab fa-facebook-square"></i></a></li>
+          <li><a><i class="fab fa-twitter-square"></i></a></li>
+        </ul>
+      </div>
     </footer>
 
     
