@@ -103,9 +103,9 @@ ul {
   background: #FFFDC0;
   justify-content: space-between;
   flex-flow: row wrap;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(224,223,204,1);
-  -moz-box-shadow: 0px 4px 10px 0px rgba(224,223,204,1);
-  box-shadow: 0px 4px 10px 0px rgba(224,223,204,1);
+  -webkit-box-shadow: 0 4px 10px 0 rgba(224,223,204,1);
+  -moz-box-shadow: 0 4px 10px 0 rgba(224,223,204,1);
+  box-shadow: 0 4px 10px 0 rgba(224,223,204,1);
   z-index: 99;
 }
 
@@ -197,7 +197,7 @@ main {
   margin-top: 6rem;
   width: 80%;
   z-index: 89;
-  box-shadow: 0px 2px 2px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(255, 255, 255, 0.5);
 }
 
 .intro div:nth-child(1) {
@@ -245,16 +245,12 @@ main {
   margin-top: -1rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .profile {
   background: rgba(208,146,133,0.8);
   z-index: 70;
-}
-
-#profile {
-  
 }
 
 .profile-title span {
@@ -265,7 +261,7 @@ main {
   padding: 2px 20px;
   border: 2px solid rgba(255,255,255,0.9);
   border-radius: 20px;
-  box-shadow: 0px 2px 10px 1px rgba(255,255,255,0.9);
+  box-shadow: 0 2px 10px 1px rgba(255,255,255,0.9);
   margin-bottom: 2rem;
 }
 
@@ -337,7 +333,7 @@ main {
 }
 
 @keyframes Gradient { 
-  0%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 0px, rgb(146, 159, 175) 15px, rgb(144, 102, 114) 15px, rgb(144, 102, 114) 30px)}
+  0%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 0, rgb(146, 159, 175) 15px, rgb(144, 102, 114) 15px, rgb(144, 102, 114) 30px)}
   50%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 15px, rgb(146, 159, 175) 30px, rgb(144, 102, 114) 30px, rgb(144, 102, 114) 45px)}
   100%{background: repeating-linear-gradient(125deg, rgb(146, 159, 175) 30px, rgb(146, 159, 175) 45px, rgb(144, 102, 114) 45px, rgb(144, 102, 114) 60px)}
 }
@@ -443,7 +439,7 @@ main {
   color: rgba(255,255,255,0.9);
   border-radius: 1rem;
   border: 0.3rem double rgba(255, 255, 255, 0.5);
-  text-align: justify;  text-align: justify;
+  text-align: justify;
   padding: 0.3rem 0.1rem;
 }
 
@@ -575,7 +571,7 @@ main {
   
   .header {
     flex-direction: column;
-    box-shadow: 0px 4px 10px 0px rgba(224,223,204,0.8);
+    box-shadow: 0 4px 10px 0px rgba(224,223,204,0.8);
   }
 
   h1 {
@@ -611,7 +607,7 @@ main {
     border-radius: 0;
     padding: 10px;
     background-color: rgba(119,115,138, 0.80);
-    box-shadow: 0px 0px 3px 3px rgba(224,223,204,0.8);
+    box-shadow: 0 0 3px 3px rgba(224,223,204,0.8);
   }
 
   .intro-content {
