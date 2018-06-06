@@ -8,6 +8,8 @@
   padding: 0;
   box-sizing: border-box;
   word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -197,7 +199,7 @@ main {
   margin-top: 6rem;
   width: 80%;
   z-index: 89;
-  box-shadow: 0 2px 2px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .intro div:nth-child(1) {
@@ -242,7 +244,6 @@ main {
 .column-layout {
   width: 80%;
   flex-flow: column wrap;
-  margin-top: -1rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
@@ -461,6 +462,10 @@ main {
   background-color: rgba(132,187,190,0.7);
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+.display {
+  display: block;
 }
 
 #outside-work {
